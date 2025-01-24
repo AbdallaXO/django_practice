@@ -5,7 +5,8 @@
 {% block content %} 
 <ul>
     {% for book in books %}
-    <li> <a href="{% url "book-detail" book.id %}">{{book.author}}</a></li>
+    <li> <a href="{{book.get_absolute_url}}">{{book.author}}</a></li>
     {% endfor %}
 </ul>
+<p>{{ab}}</p>
 {% endblock %}
