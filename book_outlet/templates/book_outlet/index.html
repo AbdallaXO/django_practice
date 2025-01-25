@@ -3,6 +3,8 @@
 {% block title%} All Books{% endblock%}
 
 {% block content %} 
+<h2>Average Rating: {{average.rating__avg}}</h2>
+<h2>Books Count: {{book_numbers}}</h2>
 <ul>
     {% for book in books %}
     <li> <a href="{{book.get_absolute_url}}">{{book.author}}</a></li>
